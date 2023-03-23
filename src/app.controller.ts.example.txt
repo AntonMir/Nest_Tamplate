@@ -1,0 +1,17 @@
+// ДАННЫЙ МОДУЛЬ НЕ ИСПОЛЬЗУЕТСЯ В ПРОЕКТЕ И НЕСЕТ ИСКЛЮЧИТЕЛЬНО ПОКАЗАТЕЛЬНЫЙ ХАРАКТЕР
+// работа строго с Эндпоинтами
+// никакой Бизнес логики
+
+import { Controller, Get } from '@nestjs/common'
+import { AppService } from './app.service.ts.temp';
+
+@Controller('/api')
+export class AppController {
+
+  constructor(private appService: AppService) {}
+
+  @Get('/users')
+  getUsers() {
+    return this.appService.getUsers()
+  }
+}

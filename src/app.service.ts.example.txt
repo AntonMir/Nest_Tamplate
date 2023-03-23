@@ -1,0 +1,22 @@
+// ДАННЫЙ МОДУЛЬ НЕ ИСПОЛЬЗУЕТСЯ В ПРОЕКТЕ И НЕСЕТ ИСКЛЮЧИТЕЛЬНО ПОКАЗАТЕЛЬНЫЙ ХАРАКТЕР
+// Бизнес логика 
+// Обращение к базе данных
+// Валидация данных
+// Небольшая логика
+// Только принимать запрос и возвращать ответ
+// должен оставаться максимально тонким
+
+import { Injectable } from '@nestjs/common'
+import { Sequelize } from 'sequelize-typescript'
+
+@Injectable()
+export class AppService {
+
+  constructor(private sequelize: Sequelize) {}
+
+  getUsers() {
+
+    return [{id: 1, name: 'Anton'}]
+
+  }
+}
